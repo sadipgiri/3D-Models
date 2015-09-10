@@ -1,0 +1,6 @@
+cylinder{
+<0,1,0>//base point
+.5//radius of base point
+<0,2.5,0>//cap point
+.5//radius of cap point
+}
