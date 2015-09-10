@@ -1,0 +1,17 @@
+camera{
+location<0,2,-5>
+look_at<0,0,0>
+}
+
+
+cone{
+<o,o,o>//base point
+1//base radius
+<<0,2,0>//cap point
+0//cap radius
+texture{
+pigment{
+rgb<0.2,0,0.1>
+}
+}
+}
