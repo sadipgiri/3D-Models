@@ -327,7 +327,7 @@ rgb <1,0,.75>
 };
 
 
-object{
+/*object{
 Torus
 }
 
@@ -393,7 +393,7 @@ translate <0,ytorus*8,0>
 object{
 Torus
 translate <0,ytorus*9,0>
-}   
+}*/   
 
 
 
@@ -408,4 +408,105 @@ rgb<1,0,.25,>
 }
 }
 }
-   
+
+
+
+
+/*#declare sun = sphere{
+<0,0,0>//center
+2//radius
+texture{
+pigment{
+rgb<.4,.4,0>
+}
+}
+};
+
+
+light_source{
+<9,7,0>
+rgb<1,1,1>
+looks_like {sun}
+}*/  
+
+difference{
+
+union{
+
+cylinder{
+<0,0,0>
+<0,4,0>
+.2
+texture{SolidBlue}
+rotate <0,0,-125>
+translate <5,4,0>
+}
+  
+  
+  
+cylinder{
+<0,0,0>
+<0,4,0>
+.2
+texture{SolidBlue}
+rotate <0,0,-225>
+translate <8,4,0>
+} 
+}
+
+
+box{
+<7,0,-2>
+<9,5,6> 
+translate <-.3,0,-2>
+}
+
+} 
+
+
+
+sphere{//dot inside the flag
+<5.7,2.7,0>
+.3
+texture{
+pigment{
+rgb <1,0,0>
+}
+}
+}
+
+
+
+
+cylinder{
+<0,0,0>
+<0,3,0> 
+.2
+rotate <0,0,-125>
+translate <5,1.5,0>
+texture{SolidBlue}
+}
+
+
+
+
+cylinder{
+<0,0,0>
+<0,3,0> 
+.2
+rotate <0,0,-65>
+translate <5,-1.5,0>
+texture{SolidBlue}
+}
+
+
+
+sphere{//dot inside the flag
+<5.9,-.1,0>
+.3
+texture{
+pigment{
+rgb <1,0,0>
+}
+}
+}
