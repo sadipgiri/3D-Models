@@ -234,27 +234,178 @@ SolidBlue
   
 
 
+cylinder{
+<5,-2.5,0>//base center
+<5,4,0>//cap center
+.3//radius
+texture{
+SolidBlue
+}
+} 
+
+
+
+sphere{
+<5,-2.5,0>//center
+.4//radius
+texture{
+SolidBlue
+}
+}
 
 
 
 
 
 
+/*cylinder{
+<5,5,0>//base point
+<5,7,0>//cap point
+.2//radius
+rotate <65,0,0>
+rotate <0,65,0>
+texture{
+SolidBlue
+}
+}   
+ 
+ 
+ 
+ 
+ 
+cylinder{
+<5,5.1,0>//base point
+<5,11.7,0>//cap point
+.3//radius
+rotate <0,0,0>
+texture{
+SolidBlue
+}
+}*/
 
 
 
 
 
+torus{
+3//major axis
+.2//minor axis
+texture{
+pigment{
+rgb <1,0,.75>
+}
+}
+}
+
+
+
+light_source{
+<0,100,-100>
+rgb<1,.75,0>//an orange color
+}   
+
+
+
+light_source{
+<100,100,-100>
+rgb<1,.75,0>//an orange color
+}  
+
+
+#declare ytorus = .4;
+
+
+#declare Torus = torus{
+.7//major axis
+.2//minor axis
+translate <5,0,0>
+texture{
+pigment{
+rgb <1,0,.75>
+}
+}
+};
+
+
+object{
+Torus
+}
+
+
+object{
+Torus
+translate <0,ytorus,0>
+}
+ 
+ 
+ 
+object{
+Torus
+translate <0,ytorus*2,0>
+}
+ 
+
+
+
+object{
+Torus
+translate <0,ytorus*3,0>
+}
 
 
 
 
+object{
+Torus
+translate <0,ytorus*4,0>
+}
+
+
+object{
+Torus
+translate <0,ytorus*5,0>
+}
+ 
+  
+
+object{
+Torus
+translate <0,ytorus*6,0>
+}
 
 
 
+object{
+Torus
+translate <0,ytorus*7,0>
+}
 
 
 
+object{
+Torus
+translate <0,ytorus*8,0>
+}
+ 
+ 
+ 
+ 
+object{
+Torus
+translate <0,ytorus*9,0>
+}   
 
 
 
+cone{
+<5,3,0>//baSe point
+0//base point radius
+<5,6,0>//cap point
+.9//cap point radius
+texture{
+pigment{
+rgb<1,0,.25,>
+}
+}
+}
+   
