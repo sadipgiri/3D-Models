@@ -1,3 +1,4 @@
+
 background{
 rgb<0,1,1>
 }
@@ -20,7 +21,8 @@ rgb<0,1,1>
 pigment{
 rgb<0,0,1>
 }
-};
+};  
+
 
 camera{
 location FrontCameraPos
@@ -47,9 +49,7 @@ rgb<1,1,1>
 }  
 
   
-  
-  
-  
+     
 sphere{
 <0,3,0>//center
 3//radius
@@ -287,7 +287,7 @@ SolidBlue
 
 
 
-torus{
+/*torus{
 3//major axis
 .2//minor axis
 texture{
@@ -295,7 +295,7 @@ pigment{
 rgb <1,0,.75>
 }
 }
-}
+}*/
 
 
 
@@ -510,3 +510,101 @@ rgb <1,0,0>
 }
 }
 }
+ 
+
+
+
+plane{
+<0,-20,1>
+1 
+translate <0,-7.5,0>
+texture{
+pigment{
+rgb<0,1,0>
+}
+}
+}   
+
+
+
+box{//1st shoes of the statue
+<0,0,0>//corner 1
+<2,1,1>//corner 2
+rotate <0,90,0>
+translate <-1.7,-8.9,.5> 
+texture{
+pigment{
+rgb <1,0,0> 
+}
+}
+}
+
+
+
+box{//2nd shoes of the statue
+<0,0,0>//corner 1
+<2,1,1>//corner 2
+rotate <0,90,0>
+translate <.7,-8.9,.5> 
+texture{
+pigment{
+rgb <1,0,0> 
+}
+}
+}
+
+
+torus{//ring in the neck
+1//major axis
+.5//minor axis
+texture{
+pigment{
+rgb<.5,0,0>
+}
+}
+} 
+
+
+
+
+torus{//left hand ring 
+.5//major axis
+.1//minor axis 
+rotate <90,90,0>
+translate <-4.9,-2.3,.7>
+texture{
+pigment{
+rgb<.5,0,0>
+}
+}
+}
+
+
+
+torus{//left hand ring 
+.5//major axis
+.1//minor axis 
+rotate <90,90,0>
+translate <4.5,-2.1,.7>
+texture{
+pigment{
+rgb<.5,0,0>
+}
+}
+}
+
+
+
+sphere{//sphere of the hand
+<-5.5,-2.6,1>//radius of the sphere
+.7//radius
+texture{
+pigment{
+rgb <0,.75,1>
+}
+}
+} 
+
+
+
+
