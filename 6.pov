@@ -1,10 +1,9 @@
-
 background{
 rgb<0,1,1>
 }
    
    
-#declare FrontCameraPos = <0,0,-17>;
+#declare FrontCameraPos = <0,0,-35>;
 #declare BackCameraPos = <0,0,15>;
 #declare LeftHandSideCameraPos = <-15,0,0>;
 #declare RightHandSideCameraPos = <15,0,0>;
@@ -50,7 +49,7 @@ rgb<1,1,1>
 
   
      
-sphere{//head of the statue
+sphere{
 <0,3,0>//center
 3//radius
 texture{
@@ -63,7 +62,7 @@ rgb<1,1,1>
 
 
 
-sphere{//left hand side eye
+sphere{
 <-1.7,3.5,-2>//center
 .7//radius
 texture{
@@ -74,7 +73,7 @@ rgb<1,0,0>
 }
 
 
-sphere{//right hand side eye
+sphere{
 <1.7,3.5,-2>//center
 .7//radius
 texture{
@@ -82,12 +81,11 @@ pigment{
 rgb<1,0,0>
 }
 } 
-}
-    
+}    
 
 
 
-sphere{//mouth of the statue
+sphere{
 <0,1.7,-2>//center
 .7//radius
 texture{
@@ -98,7 +96,7 @@ rgb<1,0,0>
 }
 
 
-cone{//skirt of the statue
+cone{
 <0,-4,0>//base point
 3.7//base radius
 <0,1,0>//cap point
@@ -111,7 +109,7 @@ rgb<1,0.75,0>
 }
 
 
-cone{//head bean of the statue
+cone{
 <0,5,0>//base point
 2.5//base radius
 <0,2,0>//cap point
@@ -132,7 +130,7 @@ rgb<1,1,1>
 
 
 
-cylinder{//left hand side leg  
+cylinder{  
 <-1.2,-8,0>//base point
 <-1.2,-4,0>//cap point
 0.4//radius
@@ -146,7 +144,7 @@ rgb<1,1,1>
 
 
 
-cylinder{//right hand side leg  
+cylinder{  
 <1.2,-8,0>//base point
 <1.2,-4,0>//cap point
 0.4//radius
@@ -177,7 +175,7 @@ rgb<1,1,1>
 
 
 
-cylinder{//left hand 
+cylinder{
 <0,-6,0>//base point
 <0,0,0>//cap point
 .4//radius
@@ -192,7 +190,7 @@ rgb<1,1,1>
 
  
  
-cylinder{//right hand
+cylinder{
 <0,-6,0>//base point
 <0,0,0>//cap point
 .4//radius
@@ -211,7 +209,7 @@ rgb<1,1,1>
 
 
 
-sphere{//first bottom
+sphere{
 <0,YLenght,-2>//center
 .4//radius
 texture{
@@ -221,7 +219,7 @@ SolidBlue
 
 
 
-sphere{//second botton
+sphere{
 <0,-1+YLenght,-2>//center
 .4//radius
 texture{
@@ -235,7 +233,7 @@ SolidBlue
   
 
 
-cylinder{//vertical part of flag
+cylinder{
 <5,-2.5,0>//base center
 <5,4,0>//cap center
 .3//radius
@@ -246,7 +244,7 @@ SolidBlue
 
 
 
-sphere{//flag base
+sphere{
 <5,-2.5,0>//center
 .4//radius
 texture{
@@ -398,7 +396,7 @@ translate <0,ytorus*9,0>
 
 
 
-cone{//flag cap
+cone{
 <5,3,0>//baSe point
 0//base point radius
 <5,6,0>//cap point
@@ -479,7 +477,7 @@ rgb <1,0,0>
 
 
 
-cylinder{//part of flag
+cylinder{
 <0,0,0>
 <0,3,0> 
 .2
@@ -491,7 +489,7 @@ texture{SolidBlue}
 
 
 
-cylinder{//part of flag
+cylinder{
 <0,0,0>
 <0,3,0> 
 .2
@@ -515,7 +513,7 @@ rgb <1,0,0>
 
 
 
-plane{//surface
+plane{
 <0,-20,1>
 1 
 translate <0,-7.5,0>
@@ -528,7 +526,7 @@ rgb<0,1,0>
 
 
 
-box{//first shoes of the statue
+box{//1st shoes of the statue
 <0,0,0>//corner 1
 <2,1,1>//corner 2
 rotate <0,90,0>
@@ -542,7 +540,7 @@ rgb <1,0,0>
 
 
 
-box{//second shoes of the statue
+box{//2nd shoes of the statue
 <0,0,0>//corner 1
 <2,1,1>//corner 2
 rotate <0,90,0>
@@ -582,7 +580,7 @@ rgb<.5,0,0>
 
 
 
-torus{//right hand ring 
+torus{//left hand ring 
 .5//major axis
 .1//minor axis 
 rotate <90,90,0>
@@ -596,7 +594,7 @@ rgb<.5,0,0>
 
 
 
-sphere{//left hand
+sphere{//sphere of the hand
 <-5.5,-2.6,1>//radius of the sphere
 .7//radius
 texture{
@@ -608,4 +606,126 @@ rgb <0,.75,1>
 
 
 
+#declare StatueTwo =
 
+union{
+
+sphere{//first head of another statue
+<-14.7,5,0>
+4.3
+texture{
+pigment{
+rgb <1,1,1>
+}
+}
+}
+
+
+
+sphere{//second head of another statue 
+<-14.7,-5,0>
+6.9
+texture{
+pigment{
+rgb <1,1,1>
+}
+}
+}
+
+
+
+sphere{//left eye
+<-10,6,-5>
+0.8    
+texture{
+pigment{
+rgb <0,0,1>
+}
+}
+}
+
+
+
+sphere{//right eye
+<-12.8,6,-5>
+0.8 
+texture{
+pigment{
+rgb <0,0,1>
+}
+}
+} 
+
+
+sphere{
+<-10.5,4,-6.5>
+0.39
+texture{
+pigment{
+rgb <0,0,1>
+}
+}
+}
+
+ 
+
+cylinder{
+<0,0,0>
+<0,4,0>
+.3   
+rotate <0,0,110>
+translate <-6,-2,2>
+texture{
+pigment{
+rgb <0,0,0>
+}
+}
+}
+};
+
+
+
+object{
+StatueTwo
+translate <0,0,1.5>
+} 
+
+
+
+//Area Light  
+#declare AreaLight = light_source {
+    <20,20,-20>
+    rgb <1,1,1>
+    area_light
+    <5,0,5>, <0,5,5>, 4, 4
+};
+
+
+
+light_source{
+AreaLight 
+translate <-25,-20,22>
+}
+
+
+
+
+//Spotlight 
+#declare Spotlight = light_source { 
+    <10,10,-20>
+    rgb <1,1,1>*100
+    spotlight
+    radius 0
+    falloff  90
+    tightness  100
+    point_at <-2,0,0>
+}; 
+
+
+
+
+
+light_source{
+Spotlight             
+translate <-10,-10,20>
+}

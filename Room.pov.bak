@@ -1,0 +1,48 @@
+#declare RoomWidth = 632;
+#declare RoomLength = 1016;
+#declare RoomHeight = 335;
+
+
+#declare HalfRoomWidth = RoomWidth/2;
+#declare HalfRoomLength = RomLength/2;
+#declare SeatedEyeHeight = 112;
+
+#declare CATLab = box{
+<0,0,0>
+<RoomWidth,RoomHeight,RoomLength>
+};
+
+
+/*
+#declare Windows = box{
+<,,>
+<,,>
+}*/
+
+
+#declare Margaret = <HalfRoomWidth,SeatedEyeHeight,40>
+
+
+camera{
+location Margaret
+look_at <HalfRoomWidth,SeatedEyeHeight,40>
+}
+
+
+light_source{
+location <HalfRoomWidth,SeatedEyeHeight,HalfRoomLenght> 
+rgb <1,1,1>
+}
+
+
+object{
+CATLab
+texture{
+pigment{
+rgb <1,1,1>
+}
+}
+} 
+
+
+
