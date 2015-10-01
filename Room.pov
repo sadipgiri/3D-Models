@@ -79,8 +79,8 @@ texture{
 
 
 #declare Box = box{
-<-0.2,1,1>
-<4.8,2,1.3>
+<-250,0,0>
+<0,10,0>
 texture{
 pigment{
 rgb <1,1,1>
@@ -88,24 +88,6 @@ rgb <1,1,1>
 }
 };  
 
-background{
-rgb <1,1,1>
-}
 
-camera{
-location <0,-5,-2>
-look_at <0,0,0>
-}
-
-
-light_source{
-<15,15,-15>
-rgb <1,1,1>
-}
-
-object{ 
-Box
-translate <-2,4,0> 
-}
 
 
