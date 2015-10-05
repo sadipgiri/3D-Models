@@ -515,7 +515,7 @@ rgb <1,0,0>
 
 
 
-plane{//surface
+/*plane{//surface
 <0,-20,1>
 1 
 translate <0,-7.5,0>
@@ -524,7 +524,7 @@ pigment{
 rgb<0,1,0>
 }
 }
-}   
+}*/   
 
 
 

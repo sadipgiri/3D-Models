@@ -1,58 +1,102 @@
+#declare Red = texture { pigment { rgb <1,0,0> } }; 
+#declare White = texture { pigment { rgb <1,1,1> } };
+#declare Green = texture { pigment { rgb <0,0,1> } };
+#declare Cyan = color blue 1.0 green 1.0;  
+#declare Brown = texture{pigment{rgb<.3,.1,0>}};   
+
+
+
+//Room Textures
+#declare WallTexture = texture {
+	pigment {
+		rgb <1,1,1>
+	}
+};
+
+
+
+#declare RoomWidth = 500; 
+#declare RoomLength = 650; 
+#declare RoomHeight = 300;
+#declare HalfRoomWidth = RoomWidth/2;
+#declare HalfRoomLength = RoomLength/2;
+#declare HalfRoomHeight = RoomHeight/2;
 
 
 
 
+#declare MyFlagPos = <HalfRoomWidth, 100, 30>;
+#declare SadipPos = <HalfRoomWidth,100,RoomLength-30>;
+camera {
+	location SadipPos
+	look_at <HalfRoomWidth,100,HalfRoomLength>
+	}
+
+background { rgb <1,1,1> }  
 
 
-
-
-
-camera{
-location<0,4,-5>
-look_at <0,1,0>
+light_source {
+	<HalfRoomWidth,100,HalfRoomLength>
+	rgb <1,1,1>
 }
 
 
 
 
-#declare {
-rgb<.1,.1,0>
-}    
+
+#declare Room = box{
+<0,0,0>
+<RoomWidth,RoomHeight,RoomLength>
+texture{White}
+};  
 
 
 
-/*sphere{
-<0,2.9,0>//center
-.4//radius
-texture{
-pigment{
-rgb<1,0,0>
+#declare Windows = 
+
+union{
+
+#declare WindowHeight = 150;
+#declare WindowDistanceFromGround = 90;
+#declare WindowFullHeight = RoomHeight - WindowDistanceFromGround;
+#declare WindowCutout = box {
+	<RoomWidth*(2/3),0,-16>
+	<RoomWidth,WindowFullHeight,16>
+	translate <0,WindowDistanceFromGround,0>
+};
+
+object{
+WindowCutout 
+} 
+
+
+object{
+WindowCutout 
+translate <-RoomWidth*(2/3),0,0>
 }
-}
-}*/     
+
+};
 
 
-/*box{
-<-1,1.9,-1>//corner 1
-<1,2.4,3>//corner 2
-texture{
-pigment{
-rgb<0,0,1>
+
+difference {
+	object {
+		Room
+		scale 1.01
+	}
+	object {
+		Room
+	}
+	object {
+		Windows
+	}
+	texture { WallTexture }
 }
-}
-}*/   
 
 
-/*cone{
-<0,0,0>//base point
-1//base radius
-<0,3,0>//cap point
-.1//cap radius
-texture{
-pigment{
-rgb<1,1,0>
-}
-}
-}*/
 
- 
+
+
+
+
+

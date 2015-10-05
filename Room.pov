@@ -46,7 +46,7 @@ light_source  {
       rgb<1,1,1>  
       
       }
-/*difference {
+difference {
 object{       
        
        CATLab   
@@ -69,25 +69,4 @@ texture{
        rgb<1,1,1>
 }
 }
-}*/      
-
-
-
-
-
-
-
-
-#declare Box = box{
-<-250,0,0>
-<0,10,0>
-texture{
-pigment{
-rgb <1,1,1>
 }
-}
-};  
-
-
-
-
