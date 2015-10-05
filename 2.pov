@@ -23,14 +23,27 @@
 #declare HalfRoomHeight = RoomHeight/2;
 
 
-
-
 #declare MyFlagPos = <HalfRoomWidth, 100, 30>;
 #declare SadipPos = <HalfRoomWidth,100,RoomLength-30>;
-camera {
+
+#declare BackWindowCameraPos = camera{
+location <HalfRoomWidth,RoomHeight,-RoomLength>
+look_at MyFlagPos   
+};
+
+
+#declare FrontWindowCameraPos = camera{
 	location SadipPos
 	look_at <HalfRoomWidth,100,HalfRoomLength>
-	}
+	};
+	
+	
+	
+camera{
+BackWindowCameraPos
+}
+
+	
 
 background { rgb <1,1,1> }  
 
@@ -92,7 +105,6 @@ difference {
 	}
 	texture { WallTexture }
 }
-
 
 
 
