@@ -14,14 +14,6 @@ rgb<1,0,0>
 #declare TOPCAMERAPOSITION = <0,10,0>;
 #declare TOPFRONTANGLECAMERAPOSITION = <0,3,-5>  
 
-
-
-camera{
-location TOPFRONTANGLECAMERAPOSITION
-look_at <0,0,0>
-}
-
-
 light_source{
 <2,5,-3>
 rgb<1,1,1>

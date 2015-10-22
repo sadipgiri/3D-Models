@@ -1,3 +1,6 @@
+
+
+
 camera{
 location<0,4,-5>
 look_at <0,1,0>

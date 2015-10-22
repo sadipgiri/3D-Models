@@ -48,6 +48,8 @@ rgb<1,1,1>
 }  
 
   
+#declare manflag = 
+union{
      
 sphere{
 <0,3,0>//center
@@ -513,7 +515,7 @@ rgb <1,0,0>
 
 
 
-plane{
+/*plane{
 <0,-20,1>
 1 
 translate <0,-7.5,0>
@@ -523,7 +525,7 @@ rgb<0,1,0>
 }
 }
 }   
-
+*/
 
 
 box{//1st shoes of the statue
@@ -684,11 +686,40 @@ rgb <0,0,0>
 };
 
 
-
 object{
 StatueTwo
 translate <0,0,1.5>
 } 
+
+};
+
+#declare row = 
+union{
+
+object{
+manflag
+scale .1
+translate <-19,-14,0>
+}
+
+object{
+manflag
+scale .2
+translate <-15,-10,0>
+}
+
+object{
+manflag
+scale .3
+translate <-11,-3,0>
+}                   
+
+
+object{
+manflag
+scale .4
+translate <-7,5,0>
+}
 
 
 
@@ -705,6 +736,19 @@ translate <0,0,1.5>
 light_source{
 AreaLight 
 translate <-25,-20,22>
+}
+
+};
+
+
+object{
+row
+}
+
+
+object{
+row  
+rotate <0,180,0>
 }
 
 
@@ -728,4 +772,6 @@ translate <-25,-20,22>
 light_source{
 Spotlight             
 translate <-10,-10,20>
-}
+} 
+
+

@@ -70,6 +70,7 @@ texture{White}
 union{
 
 #declare WindowHeight = 150;
+#declare HalfWindowHeight = WindowHeight/2;
 #declare WindowDistanceFromGround = 90;
 #declare WindowFullHeight = RoomHeight - WindowDistanceFromGround;
 #declare WindowCutout = box {
@@ -108,7 +109,23 @@ difference {
 
 
 
+light_source{
+<HalfRoomWidth,RoomHeight,-RoomLength>*2
+rgb <1,1,1>
+
+point_at MyFlagPos
+}
 
 
+
+/*#declare HorizontalLineOnWindow = box{
+<0,HalfWindowHeight,RoomLength>
+<10,HalfWindowHeight+2,RoomLength>
+texture{Black}
+};
+
+object{
+HorizontalLineOnWindow
+}*/ 
 
 
